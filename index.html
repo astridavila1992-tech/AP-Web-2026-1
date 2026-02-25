@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Empresa TechNova</title>
+
+    <!-- CONEXION AL ARCHIVO CSS EXTERNO  -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- CLASE GENERAL PARA APLICAR GRID EN TODA LA ESTRUCTURA -->
+<body class="layout">
+
+    <!-- ================= HEADER (HTML SEMÁNTICO) ================= -->
+      <!-- Encabezado principal del sitio -->
+    <header class="header">
+
+        <!-- Título principal del sitio (h1 jerarquía correcta) -->
+        <h1 class="header__title">TechNova</h1>
+
+        <!--  Barra de navegación  (HTML SEMÁNTICO) -->
+        <nav class="menu">
+
+            <!-- BEM: menu (bloque), menu__list (elemento) -->
+            <ul class="menu__list">
+
+                <!-- BEM elemento -->
+                <li class="menu__item">
+                    <!-- Enlace interno hacia la sección servicios -->
+                    <a href="#servicios" class="menu__link">Servicios</a>
+                </li>
+
+                <li class="menu__item">
+                    <a href="#nosotros" class="menu__link">Nosotros</a>
+                </li>
+
+                 <!-- Modificador BEM para indicar elemento activo -->
+                <li class="menu__item menu__item--active">
+                    <a href="#contacto" class="menu__link">Contacto</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <!-- ============================================================ -->
+
+
+    <!-- ================= MAIN (HTML SEMÁNTICO) ================= -->
+      <!-- Contenido principal del sitio -->
+    <main class="main">
+
+        <!-- SECTION 1 -->
+        <!-- section--flex es MODIFICADOR BEM --> <!-- Sección temática de servicios -->
+        <section id="servicios" class="section section--flex">
+
+            <h2 class="section__title">Nuestros Servicios</h2>
+
+            <!-- ARTICLE (Contenido independiente) -->
+            <article class="card">
+ 
+                <!-- BEM elemento --> <!-- Artículo independiente tipo tarjeta -->
+                <h3 class="card__title">Desarrollo Web</h3>
+                <p class="card__text">
+                    Creamos sitios web profesionales y estructurados.
+                </p>
+
+            </article>
+
+            <!-- CARD CON MODIFICADOR -->    <!-- Tarjeta con modificador BEM -->
+            <article class="card card--highlight">
+                <h3 class="card__title">Diseño UI</h3>
+                <p class="card__text">
+                    Diseños modernos enfocados en experiencia de usuario.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- SECTION 2 -->
+          <!-- Segunda sección temática -->
+        <section id="nosotros" class="section">
+            <h2 class="section__title">Sobre Nosotros</h2>
+
+                  <!-- Artículo con información independiente -->
+            <article>
+                <p>
+                    Somos una empresa tecnológica enfocada en soluciones digitales.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- ASIDE  Información complementaria -->
+        <aside class="aside">
+            <h3>Información adicional</h3>
+            <p>Más de 5 años de experiencia en el sector tecnológico.</p>
+        </aside>
+
+    </main>
+    <!-- ============================================================ -->
+
+
+    <!-- FOOTER (HTML SEMÁNTICO) -->
+      <!-- Pie de página con información final -->
+    <footer id="contacto" class="footer">
+        <p>© 2026 TechNova - Todos los derechos reservados</p>
+    </footer>
+
+
+    <!-- BOTÓN FLOTANTE (Position: fixed) -->  <!-- Botón flotante con position fixed -->
+    <button class="btn-float">↑</button>
+
+</body>
+</html>

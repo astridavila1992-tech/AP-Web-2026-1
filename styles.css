@@ -1,0 +1,140 @@
+/* Reset general y aplicación global del modelo de caja */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border dentro del ancho total */
+}
+
+
+/* ===== GRID: estructura general del layout ===== */
+.layout {
+    display: grid; /* Activa Grid */
+    
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+
+    grid-template-columns: 3fr 1fr; /* 3 partes contenido, 1 parte aside */
+    min-height: 100vh;
+}
+
+
+/* ===== HEADER ===== */
+.header {
+    grid-area: header; /* Ubicación en Grid */
+    background-color: #1e293b;
+    color: white;
+    padding: 20px; /* Espacio interno (modelo de caja) */
+
+    position: sticky; /* Se mantiene fijo al hacer scroll */
+    top: 0;
+}
+
+.header__title {
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+
+/* ===== FLEXBOX EN MENÚ ===== */
+.menu__list {
+    display: flex; /* Activa Flexbox */
+    justify-content: space-around; /* Distribuye horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    list-style: none;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px; /* Espacio interno */
+    border-radius: 5px;
+}
+
+/* Cambio visual cuando el mouse pasa encima */
+.menu__link:hover {
+    background-color: #334155;
+}
+
+/* Modificador BEM para elemento activo */
+.menu__item--active .menu__link {
+    background-color: #475569;
+}
+
+
+/* ===== MAIN ===== */
+.main {
+    grid-area: main; /* Ubicación en Grid */
+    padding: 20px;
+}
+
+
+/* ===== SECTION ===== */
+.section {
+    margin-bottom: 40px; /* Espacio externo */
+}
+
+.section__title {
+    margin-bottom: 15px;
+}
+
+/* Flexbox para tarjetas */
+.section--flex {
+    display: flex;
+    gap: 20px; /* Espacio entre tarjetas */
+}
+
+
+/* ===== CARDS ===== */
+.card {
+    background-color: #f1f5f9;
+    padding: 20px; /* Espacio interno */
+    border: 1px solid #cbd5e1; /* Borde */
+    width: 200px;
+}
+
+/* Modificador visual */
+.card--highlight {
+    border: 2px solid #1e293b;
+}
+
+.card__title {
+    margin-bottom: 10px;
+}
+
+
+/* ===== ASIDE ===== */
+.aside {
+    grid-area: aside;
+    background-color: #e2e8f0;
+    padding: 20px;
+    border-left: 2px solid #94a3b8;
+}
+
+
+/* ===== FOOTER ===== */
+.footer {
+    grid-area: footer;
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* ===== BOTÓN FLOTANTE ===== */
+.btn-float {
+    position: fixed; /* Permanece visible en pantalla */
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #1e293b;
+    color: white;
+    cursor: pointer;
+}
+
+/* Cambio de color al pasar el mouse */
+.btn-float:hover {
+    background-color: #334155;
+}
