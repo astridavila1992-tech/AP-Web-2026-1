@@ -138,3 +138,6 @@
 .btn-float:hover {
     background-color: #334155;
 }
+body {
+    background-color: red;
+}
